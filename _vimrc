@@ -30,6 +30,7 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_contraints = 1
+let g:go_autodetect_gopath = 0
 
 au FileType go nmap <F7> <Plug>(go-install)
 au FileType go nmap <F8> <Plug>(go-test)
