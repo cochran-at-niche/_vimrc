@@ -66,8 +66,8 @@ noremap gg ggzz
 noremap G Gzz
 
 " Move cursor when scrolling with ctrl-e and ctrl-y
-nnoremap <C-j> <C-e>j
-nnoremap <C-k> <C-y>k
+noremap <C-j> <C-e>j
+noremap <C-k> <C-y>k
 
 " jj to escape
 inoremap jj <ESC>
