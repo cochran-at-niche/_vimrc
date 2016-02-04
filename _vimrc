@@ -34,7 +34,7 @@ colorscheme solarized
 set guifont=Consolas:h11
 
 " Make markdown easier to work with
-autocmd FileType markdown :set tw=80
+autocmd FileType markdown :set tw=79
 autocmd FileType markdown :set spell
 
 " Enable filetype support
@@ -64,6 +64,10 @@ noremap n nzz
 noremap N Nzz
 noremap gg ggzz
 noremap G Gzz
+
+" Move cursor when scrolling with ctrl-e and ctrl-y
+nnoremap <C-j> <C-e>j
+nnoremap <C-k> <C-y>k
 
 " jj to escape
 inoremap jj <ESC>
