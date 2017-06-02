@@ -20,6 +20,9 @@ set lines=40 columns=150
 " Highlight the current line
 set cursorline
 
+" Lazy redraw
+set lazyredraw
+
 " Use the computer's default clipboard
 set clipboard=unnamed
 
@@ -44,20 +47,22 @@ filetype plugin indent on
 
 " Go configuration
 let g:go_fmt_command = "goimports"
+let g:go_metalinter_autosave = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+" let g:go_highlight_fields = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_contraints = 1
-let g:go_autodetect_gopath = 0
 
 " Go mappings
-au FileType go nmap <F7> <Plug>(go-install)
+au FileType go nmap <F6> <Plug>(go-metalinter)
+au FileType go nmap <F7> <Plug>(go-alternate-edit)
 au FileType go nmap <F8> <Plug>(go-test)
-au FileType go nmap <F9> <Plug>(go-coverage)
-au FileType go nmap <F10> <Plug>(go-info)
-au FileType go nmap <F11> <Plug>(go-doc-tab)
-au FileType go nmap <F12> <Plug>(go-def-tab)
+au FileType go nmap <F9> <Plug>(go-coverage-toggle)
+au FileType go nmap <F10> <Plug>(go-coverage-browser)
+au FileType go nmap <F11> <Plug>(go-install)
+au FileType go nmap <F12> <Plug>(go-doc-browser)
 
 " Center on cursor during search
 noremap n nzz
